@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from './Navbar';
 
@@ -8,6 +9,9 @@ export default function Layout({ children }) {
             <div>
                 <Navbar />
                 {children}
+                <body>
+                    <p>This is Body</p>
+                </body>
             </div>
         </>
     )
