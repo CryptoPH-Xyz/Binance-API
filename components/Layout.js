@@ -10,9 +10,6 @@ export default function Layout({ children }) {
             <div>
                 <Navbar />
                 {children}
-                <body>
-                    <p>This does not follow margins from _app.js</p>
-                </body>
             </div>
         </>
     )

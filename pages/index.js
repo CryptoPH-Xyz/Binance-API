@@ -1,17 +1,20 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
 
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>My Project</title>
       </Head>
 
-      <main>
-        <h1>Homepage</h1>
-      </main>
+      <div className="flex flex col">
+                <div className="ml-8 text-l hover:text-blue-500"><Link href='/BTCpage'>BTC/USDT</Link></div>
+                <div className="ml-8 text-l hover:text-blue-500"><Link href='/ETHpage'>ETH/USDT</Link></div>
+                <div className="ml-8 text-l hover:text-blue-500"><Link href='/DOGEpage'>DOGE/USDT</Link></div>
+      </div>
 
-    </div>
+    </>
   )
 }
