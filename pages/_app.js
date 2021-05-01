@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   
   return (
     <Layout>
-      <div className="ml-5">
+      <div className="mx-5">
         <Component {...pageProps} />
       </div>
     </Layout>

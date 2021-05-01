@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from './Navbar';
 
 
+
 export default function Layout({ children }) {
     return (
         <>
@@ -10,7 +11,7 @@ export default function Layout({ children }) {
                 <Navbar />
                 {children}
                 <body>
-                    <p>This is Body</p>
+                    <p>This does not follow margins from _app.js</p>
                 </body>
             </div>
         </>
