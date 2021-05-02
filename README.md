@@ -1,3 +1,12 @@
+wss://stream.binance.com:9443/ws/
+
+btcusdt@trade // for trades
+
+btcusdt@kline_5m //5 minute chart data
+
+btcusdt@depth //for orderbook
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

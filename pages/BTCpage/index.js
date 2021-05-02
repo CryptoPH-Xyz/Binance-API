@@ -4,7 +4,11 @@ import Bids from '../../components/Orderbook/Bids';
 import Link from 'next/link';
 
 export default function BTCpage({ orders }) {
-    //console.log(orders);
+    const socket = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@depth");
+
+    socket.onmessage = function (event) {
+        console.log(event.data);
+    }
     return (
         <>
             <div className="flex">
