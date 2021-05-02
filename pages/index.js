@@ -13,6 +13,7 @@ export default function Home() {
                 <div className="ml-8 text-l hover:text-blue-500"><Link href='/BTCpage'>BTC/USDT</Link></div>
                 <div className="ml-8 text-l hover:text-blue-500"><Link href='/ETHpage'>ETH/USDT</Link></div>
                 <div className="ml-8 text-l hover:text-blue-500"><Link href='/DOGEpage'>DOGE/USDT</Link></div>
+                <div className="ml-8 text-l hover:text-blue-500"><Link href='/BTCpage/socketpage'>BTCSocket</Link></div>
       </div>
 
     </>

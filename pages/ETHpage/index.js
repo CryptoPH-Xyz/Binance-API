@@ -11,6 +11,7 @@ export default function ETHpage({ orders }) {
                 <div className="ml-8 text-l hover:text-blue-500"><Link href='/BTCpage'>BTC/USDT</Link></div>
                 <div className="ml-8 text-l hover:text-blue-500"><Link href='/ETHpage'>ETH/USDT</Link></div>
                 <div className="ml-8 text-l hover:text-blue-500"><Link href='/DOGEpage'>DOGE/USDT</Link></div>
+                <div className="ml-8 text-l hover:text-blue-500"><Link href='/BTCpage/socketpage'>BTCSocket</Link></div>
             </div>
             <div className ="flex">
                 <div>
@@ -19,10 +20,8 @@ export default function ETHpage({ orders }) {
                     <Bids orders = {orders} />
                 </div>
             
-                <div className ="ml-10">
-                    <Asks orders = {orders} />
+                <div className ="ml-8">
                     <p>PLACE CHART HERE</p>
-                    <Bids orders = {orders} />
                 </div>
             </div>
         </>
