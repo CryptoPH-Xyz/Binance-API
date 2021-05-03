@@ -11,28 +11,14 @@
     <h1>Trading Chart</h1>
     <div id="chart"></div>
     <div id="trades"></div>
-    
-<!--
-    <h3>Settings</h3>
-    <div id="settings">
-        <input type="checkbox" /> RSI
-        <input type="text" id="rsi_length" name="rsi_length" placeholder="14" />
-        <br> 
-        Oversold
-        <input type="text" id="rsi_oversold" name="rsi_oversold" placeholder="30" />
-        <br>
-        Overbought
-        <input type="text" id="rsi_overbought" name="rsi_overbought" placeholder="70" />
-    </div>
---> 
 
     <script>
         var tradeDiv = document.getElementById('trades')
-        var binance = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_5m");
+        var binance = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@depth");
         binance.onmessage = function (event) {
 
             var stream = JSON.parse(event.data)
-            //tradeDiv.append(stream.k.o) //open price
+            //tradeDiv.append(stream.a) //asks price
 
         }
     </script>
