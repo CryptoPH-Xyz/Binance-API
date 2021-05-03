@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <Head>
         <title>My Project</title>
+        <script src = "https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
       </Head>
 
       <div className="flex flex col">

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <script src = "https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+    <h1>Trading Chart</h1>
+    <div id="chart"></div>
+    <div id="trades"></div>
+    
+<!--
+    <h3>Settings</h3>
+    <div id="settings">
+        <input type="checkbox" /> RSI
+        <input type="text" id="rsi_length" name="rsi_length" placeholder="14" />
+        <br> 
+        Oversold
+        <input type="text" id="rsi_oversold" name="rsi_oversold" placeholder="30" />
+        <br>
+        Overbought
+        <input type="text" id="rsi_overbought" name="rsi_overbought" placeholder="70" />
+    </div>
+--> 
+
+    <script>
+        var tradeDiv = document.getElementById('trades')
+        var binance = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_5m");
+        binance.onmessage = function (event) {
+
+            var stream = JSON.parse(event.data)
+            //tradeDiv.append(stream.k.o) //open price
+
+        }
+    </script>
+
+
+    <script src="chart.js"></script>
+</body>
+</html>
