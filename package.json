@@ -12,6 +12,7 @@
     "@popperjs/core": "2.9.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
     "lightweight-charts": "^3.3.0",
     "next": "10.2.0",
     "node-binance-api": "^0.12.5",
@@ -21,12 +22,12 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.1",
     "@types/node": "^15.0.1",
     "@types/react": "^17.0.4",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.13",
-    "tailwindcss": "^2.1.2",
-    "typescript": "^4.2.4"
+    "tailwindcss": "^2.1.2"
   },
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
   "main": "postcss.config.js",

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Asks from '../../components/Orderbook/Asks';
 import Bids from '../../components/Orderbook/Bids';
 import Head from 'next/head';
