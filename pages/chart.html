@@ -10,15 +10,28 @@
 <body>
     <h1>Trading Chart Draft</h1>
     <div id="chart"></div>
-    <div id="trades"></div>
+    <table>
+        <th>Ask Price</th>
+        <th>Qty</th>
+        <th>Total Amount</th>
+        <tbody>
+            <tr>
+                <td id="askPrice"></td>
+                <td id="askQty"></td>
+                <td>T1</td>
+            </tr>
+        </tbody>
+    </table>
 
     <script>
-        var tradeDiv = document.getElementById('trades')
+        var askPrice = document.getElementById('askPrice')
+        var askQty = document.getElementById('askQty')
         var binance = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@depth");
         binance.onmessage = function (event) {
 
             var stream = JSON.parse(event.data)
-            //tradeDiv.append(stream.a) //asks price
+            //askPrice.append(stream.a[0][0]) //asks price
+            //askQty.append(stream.a[0][1]) //asks qty
 
         }
     </script>

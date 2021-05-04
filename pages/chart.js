@@ -183,22 +183,3 @@ candleSeries.setData([
 	{ time: '2019-05-23', open: 188.45, high: 192.54, low: 186.27, close: 192.00 },
 	{ time: '2019-05-24', open: 192.54, high: 193.86, low: 190.41, close: 193.59 },
 ]);
-/*
-var datesForMarkers = [data[data.length - 19], data[data.length - 39]];
-var indexOfMinPrice = 0;
-for (var i = 1; i < datesForMarkers.length; i++) {
-	if (datesForMarkers[i].high < datesForMarkers[indexOfMinPrice].high) {
-		indexOfMinPrice = i;
-	}
-}
-var markers = [];
-for (var i = 0; i < datesForMarkers.length; i++) {
-	if (i !== indexOfMinPrice) {
-		markers.push({ time: datesForMarkers[i].time, position: 'aboveBar', color: '#e91e63', shape: 'arrowDown', text: 'Sell @ ' + Math.floor(datesForMarkers[i].high + 2) });
-	} else {
-		markers.push({ time: datesForMarkers[i].time, position: 'belowBar', color: '#2196F3', shape: 'arrowUp', text: 'Buy @ ' + Math.floor(datesForMarkers[i].low - 2) });
-	}
-}
-markers.push({ time: data[data.length - 48].time, position: 'aboveBar', color: '#f68410', shape: 'circle', text: 'D' });
-series.setMarkers(markers);
-*/
