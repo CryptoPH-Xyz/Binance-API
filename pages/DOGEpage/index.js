@@ -2,8 +2,8 @@ import React from 'react';
 import Asks from '../../components/Orderbook/Asks';
 import Bids from '../../components/Orderbook/Bids';
 import Head from 'next/head';
-import DropdownRender from '../../components/Dropdown';
 import MPrice from '../../components/Orderbook/MPrice';
+import DropdownButton from '../../components/DropdownButton';
 
 export default function DOGEpage({ orders, price }) {
     return (
@@ -11,7 +11,7 @@ export default function DOGEpage({ orders, price }) {
         <Head>
             <title>DOGE/USDT</title>
         </Head>
-        <DropdownRender />
+        <DropdownButton />
             <div className ="flex">
                 <div>
                     <Asks orders = {orders} />
@@ -19,7 +19,7 @@ export default function DOGEpage({ orders, price }) {
                     <Bids orders = {orders} />
                 </div>
             
-                <div className ="ml-8">
+                <div className ="ml-8 w-4/6">
                     <p>PLACE CHART HERE</p>
                 </div>
             </div>

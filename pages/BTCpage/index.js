@@ -3,7 +3,7 @@ import Asks from '../../components/Orderbook/Asks';
 import Bids from '../../components/Orderbook/Bids';
 import Head from 'next/head';
 import MPrice from '../../components/Orderbook/MPrice';
-import DropdownRender from '../../components/Dropdown';
+import DropdownButton from '../../components/DropdownButton';
 
 export default function BTCpage({ orders, price }) {
 
@@ -12,7 +12,7 @@ export default function BTCpage({ orders, price }) {
             <Head>
                 <title>BTC/USDT</title>
             </Head>
-            <DropdownRender />
+            <DropdownButton />
             <div className ="flex">
                 <div>
                     <Asks orders = {orders} />
@@ -20,7 +20,7 @@ export default function BTCpage({ orders, price }) {
                     <Bids orders = {orders} />
                 </div>
             
-                <div className ="ml-8">
+                <div className ="ml-8 w-4/6">
                     <p>PLACE CHART HERE</p>
                 </div>
             </div>

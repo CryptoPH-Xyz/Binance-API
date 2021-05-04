@@ -1,7 +1,7 @@
 import React from 'react'
 import Stream from '../../components/Orderbook/Stream';
 import Head from 'next/head';
-import DropdownRender from '../../components/Dropdown';
+import DropdownButton from '../../components/DropdownButton';
 
 export default function socketpage({ stream }) {
         return (
@@ -9,7 +9,7 @@ export default function socketpage({ stream }) {
                 <Head>
                     <title>WebSocket</title>
                 </Head>
-                <DropdownRender />
+                <DropdownButton />
                 <Stream stream={stream}/>
                 <div>
                     This page only streams data into console
