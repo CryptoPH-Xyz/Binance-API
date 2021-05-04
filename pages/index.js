@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import DropdownRender from '../components/Dropdown';
 
 export default function Home() {
   return (
@@ -7,13 +8,7 @@ export default function Home() {
       <Head>
         <title>My Project</title>
       </Head>
-
-      <div className="flex flex col">
-                <div className="ml-8 text-l hover:text-blue-500"><Link href='/BTCpage'>BTC/USDT</Link></div>
-                <div className="ml-8 text-l hover:text-blue-500"><Link href='/ETHpage'>ETH/USDT</Link></div>
-                <div className="ml-8 text-l hover:text-blue-500"><Link href='/DOGEpage'>DOGE/USDT</Link></div>
-                <div className="ml-8 text-l hover:text-blue-500"><Link href='/BTCpage/socketpage'>WebSocket</Link></div>
-      </div>
+      <DropdownRender />      
     </>
   )
 }

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.3.0",
+    "@popperjs/core": "2.9.1",
     "axios": "^0.21.1",
     "lightweight-charts": "^3.3.0",
     "next": "10.2.0",
