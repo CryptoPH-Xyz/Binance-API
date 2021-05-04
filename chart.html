@@ -30,8 +30,8 @@
         binance.onmessage = function (event) {
 
             var stream = JSON.parse(event.data)
-            //askPrice.append(stream.a[0][0]) //asks price
-            //askQty.append(stream.a[0][1]) //asks qty
+            askPrice.append(stream.a[0][0]) //asks price
+            askQty.append(stream.a[0][1]) //asks qty
 
         }
     </script>
