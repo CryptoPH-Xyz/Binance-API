@@ -20,10 +20,10 @@ export default function socketpage({ stream }) {
 
 
 }
-/*
+
 const socket = new WebSocket("wss://stream.binance.com:9443/stream?streams=btcusdt@depth/btcusdt@kline_5m");
 socket.onmessage = function (event) {
     const stream = JSON.parse(event.data)
     console.log(stream);
 }
-*/
+
