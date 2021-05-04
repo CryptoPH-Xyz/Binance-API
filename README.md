@@ -1,5 +1,5 @@
 wss://stream.binance.com:9443/ws/ single stream
-wss://stream.binance.com:9443/stream?streams=<streamName1>/<streamName2>/<streamName3> combined streams
+wss://stream.binance.com:9443/stream?streams= btcusdt@trade/btcusdt@kline_5m/btcusdt@depth combined streams
 
 btcusdt@trade // for trades
 
