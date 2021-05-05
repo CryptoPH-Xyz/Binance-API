@@ -5,28 +5,28 @@ import DropdownButton from '../../components/DropdownButton';
 import Layout from "../../components/Layout";
 
 export default function socketpage({ stream }) {
-        return (
-            <>
-                <Head>
-                    <title>WebSocket</title>
-                </Head>
-                <Layout>
-                    <DropdownButton />
-                    <Stream stream={stream}/>
-                    <div>
-                        This page only streams data into console
-                    </div>
-                </Layout>
-            </>
-        )
-
+    return (
+        <>
+            <Head>
+                <title>WebSocket</title>
+            </Head>
+            <Layout>
+                <DropdownButton />
+                <Stream stream={stream}/>
+                <div>
+                    This page only streams data into console
+                </div>
+            </Layout>
+        </>
+    )
 
 }
 
+/* commented out due to issue with vercel deployment
 const socket = new WebSocket("wss://stream.binance.com:9443/stream?streams=btcusdt@depth/btcusdt@kline_5m");
 socket.onmessage = function (event) {
     const stream = JSON.parse(event.data)
     console.log(stream);
 }
-
+*/
 
