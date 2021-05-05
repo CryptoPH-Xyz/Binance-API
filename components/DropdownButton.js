@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function DropdownButton() {
     return (
         <div>
-            <Dropdown className="relative inline-flex align-middle w-full mt-2">
+            <Dropdown className="relative inline-flex align-middle w-full">
             <Dropdown.Toggle variant="success" id="dropdown-basic" className="bg-gray-900 text-white text-l px-2 py-2 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mr-1 ease-linear transition-all duration-150">
                 Choose USDT pair
             </Dropdown.Toggle>

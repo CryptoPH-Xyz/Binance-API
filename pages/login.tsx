@@ -1,5 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react';
 import {useRouter} from 'next/router';
+import Layout from '../components/Layout';
 
 export default function login() {
     const [username, setUsername] = useState('')
@@ -19,24 +20,22 @@ export default function login() {
             })
         });
 
-        await router.push('/');
+        await router.push('/BTCpage');
     }
 
     return (
-        <>
-            <main className="form-signin w-1/6 mx-auto mt-10 font-style">
-                <form onSubmit={submit}>
+        <Layout>
+                <form onSubmit={submit} className="w-1/6 mx-auto">
                 <h1 className="h3 mb-3 text-xl text-center">Login to access Orderbooks</h1>
 
                 <input type="username" className="form-control" placeholder="Username" required
-                    onChange={(event) => setUsername(event.target.value)}
+                    onChange={e => setUsername(e.target.value)}
                 />
                 <input type="password" className="form-control" placeholder="Password" required
-                    onChange={(event) => setPassword(event.target.value)}
+                    onChange={e => setPassword(e.target.value)}
                 />
                 <button className="px-4 btn btn-lg btn-primary bg-gray-900 text-white rounded hover:bg-blue-500" type="submit">Login</button>
                 </form>
-            </main>
-        </>
+        </Layout>
     )
 }
