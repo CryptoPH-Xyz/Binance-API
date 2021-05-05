@@ -9,7 +9,7 @@ export default function register() {
     const submit = async (event: SyntheticEvent) => {
         event.preventDefault();
 
-        await fetch('http://localhost:3000/register', {
+        await fetch('http://localhost:8000/api/register', {
             method: "POST",
             headers: {'Content-Type': "application/json"},
             body: JSON.stringify({
@@ -40,3 +40,4 @@ export default function register() {
         </>
     )
 }
+

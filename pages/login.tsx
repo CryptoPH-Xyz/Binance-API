@@ -9,7 +9,7 @@ export default function login() {
     const submit = async (event: SyntheticEvent) => {
         event.preventDefault();
 
-        await fetch('http://localhost:3000/login', {
+        await fetch('http://localhost:8000/api/login', {
             method: "POST",
             headers: {'Content-Type': "application/json" },
             credentials: 'include',

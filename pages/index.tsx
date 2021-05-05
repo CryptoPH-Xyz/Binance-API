@@ -1,23 +1,30 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
-import DropdownButton from '../components/DropdownButton';
-
+import {useEffect, useState} from "react";
+import Layout from '../components/Layout';
 
 export default function Home() {
-  const [message, setMessage] = useState('You are not logged in');
+
+  const [message, setMessage] = useState('');
+  const [auth, setAuth] = useState(false);
 
   useEffect(() => {
-    (
-      async () => {
-        const response = await fetch('http://localhost:3000/api/user', {
-          credentials: 'include',
-        })
+      (
+          async () => {
+              try {
+                  const response = await fetch('http://localhost:8000/api/user', {
+                      credentials: 'include',
+                  });
 
-        const content = await response.json();
+                  const content = await response.json();
 
-        setMessage(`Hi ${content.username}`)
-      }
-    )();
+                  setMessage(`Hi ${content.username}`);
+                  setAuth(true);
+              } catch (e) {
+                  setMessage('You are not logged in');
+                  setAuth(false);
+              }
+          }
+      )();
   });
 
   return (
@@ -25,8 +32,9 @@ export default function Home() {
       <Head>
         <title>My Project</title>
       </Head>
-      <DropdownButton />
-      <div>{message}</div>
+      <Layout auth={auth}>
+        {message}
+      </Layout>
     </>
   )
 }
